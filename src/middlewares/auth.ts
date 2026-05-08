@@ -13,7 +13,7 @@ export default async function Auth(req: Request, res: Response, next: NextFuncti
         }
 
         const parts = authHeader.split(' ')
-        if (!(parts.length !== 2)) {
+        if (parts.length !== 2) {
             return res.status(401).json(responseError(['Token malformatted'], null, 401))
         }
 
